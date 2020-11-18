@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  api:
+    container_name: api
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000
+    depends_on:
+      - postgres
+    volumes:
+      - ./api:/app
+      - '/app/node_modules'
+
+  postgres:
+    container_name: postgres
+    image: postgres:13-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: dev_db

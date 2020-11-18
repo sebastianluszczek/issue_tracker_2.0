@@ -1,0 +1,16 @@
+{
+  "development": {
+    "db_name": "dev_db",
+    "db_host": "postgres",
+    "db_user": "postgres",
+    "db_pass": "pass",
+    "db_dialect": "postgres"
+  },
+  "test": {
+    "db_name": "test_db",
+    "db_host": "postgres",
+    "db_user": "postgres",
+    "db_pass": "pass",
+    "db_dialect": "postgres"
+  }
+}
