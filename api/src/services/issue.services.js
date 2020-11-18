@@ -4,7 +4,8 @@ const Issue = db.issues;
 
 exports.createIssue = async issue => {
   try {
-    return await Issue.create(issue);
+    const response = await Issue.create(issue);
+    return response.dataValues;
   } catch (error) {
     throw error;
   }
@@ -12,15 +13,17 @@ exports.createIssue = async issue => {
 
 exports.getAllIssue = async () => {
   try {
-    return await Issue.findAll();
+    const response = await Issue.findAll();
+    return response.map(res => res.dataValues);
   } catch (error) {
     throw error;
   }
 };
 
-exports.getOnIssue = async id => {
+exports.getOneIssue = async id => {
   try {
-    return await Issue.findByPk(id);
+    const response = await Issue.findByPk(id);
+    return response.dataValues;
   } catch (error) {
     throw error;
   }
@@ -39,7 +42,7 @@ exports.updateIssue = async (id, issue) => {
   }
 };
 
-exports.deleteOnIssue = async id => {
+exports.deleteOneIssue = async id => {
   try {
     return await Issue.destroy({ where: { id } });
   } catch (error) {

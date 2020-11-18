@@ -1,9 +1,9 @@
 const {
   createIssue,
-  getOnIssue,
+  getOneIssue,
   getAllIssue,
   updateIssue,
-  deleteOnIssue,
+  deleteOneIssue,
 } = require('../services/issue.services');
 
 const { ErrorHandler } = require('../utils/error.utils');
@@ -26,7 +26,7 @@ exports.getAll = async (req, res, next) => {
 exports.getOne = async (req, res, next) => {
   try {
     const id = req.params.id;
-    const issue = await getOnIssue(id);
+    const issue = await getOneIssue(id);
     if (!issue) {
       throw new ErrorHandler(404, [`Issue ${id} not found`]);
     }
@@ -48,7 +48,7 @@ exports.create = async (req, res, next) => {
       );
     }
 
-    const response = await createIssue({ ...req.body.data });
+    const response = await createIssue(req.body.data);
     res.status(201).json({
       data: response,
     });
@@ -61,7 +61,7 @@ exports.create = async (req, res, next) => {
 exports.updateOne = async (req, res, next) => {
   try {
     const id = req.params.id;
-    const issue = await getOnIssue(id);
+    const issue = await getOneIssue(id);
     if (!issue) {
       throw new ErrorHandler(404, [`Issue ${id} not found`]);
     }
@@ -100,10 +100,10 @@ exports.updateOne = async (req, res, next) => {
 exports.deleteOne = async (req, res, next) => {
   try {
     const id = req.params.id;
-    const issue = await getOnIssue(id);
+    const issue = await getOneIssue(id);
     if (!issue) throw new ErrorHandler(404, [`Issue ${id} not found`]);
 
-    const response = await deleteOnIssue(id);
+    const response = await deleteOneIssue(id);
     if (response !== 1) {
       throw new ErrorHandler(400, [`Cannot delete Issue ${id}`]);
     }
