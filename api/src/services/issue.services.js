@@ -26,6 +26,19 @@ exports.getOnIssue = async id => {
   }
 };
 
+exports.updateIssue = async (id, issue) => {
+  try {
+    const response = await Issue.update(issue, {
+      returning: true,
+      plain: true,
+      where: { id },
+    });
+    return response[1].dataValues;
+  } catch (error) {
+    throw error;
+  }
+};
+
 exports.deleteOnIssue = async id => {
   try {
     return await Issue.destroy({ where: { id } });

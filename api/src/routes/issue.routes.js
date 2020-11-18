@@ -2,6 +2,7 @@ const {
   create,
   getAll,
   getOne,
+  updateOne,
   deleteOne,
 } = require('../controllers/issue.controllers.js');
 
@@ -15,6 +16,9 @@ router.get('/', getAll);
 
 // Retrieve a single Issue with id
 router.get('/:id', getOne);
+
+// Update a single Issue with id
+router.put('/:id', updateOne);
 
 // Delete single Issue with id
 router.delete('/:id', deleteOne);

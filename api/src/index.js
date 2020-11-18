@@ -16,7 +16,7 @@ app.get('/ping', (req, res) => {
 
 app.use('/api/issues', require('./routes/issue.routes'));
 
-// app.use(logError);
+app.use(logError);
 app.use(handleError);
 
 module.exports = app;
