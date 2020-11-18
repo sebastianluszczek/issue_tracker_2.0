@@ -1,17 +1,17 @@
 class ErrorHandler extends Error {
-  constructor(statusCode, message) {
+  constructor(statusCode, errors) {
     super();
     this.statusCode = statusCode;
-    this.message = message;
+    this.errors = errors;
   }
 }
 
 const handleError = (err, req, res, next) => {
-  let { statusCode, message } = err;
+  let { statusCode, errors } = err;
   res.status(statusCode || 500);
   res.json({
     status: 'error',
-    message,
+    errors,
   });
 };
 
