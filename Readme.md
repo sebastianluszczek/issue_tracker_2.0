@@ -12,12 +12,15 @@
 <img src="https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png" alt="Node.js" width="64" style="display: inline">
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS88qsrd0PXJzWBK2MYRgBWchcs-LMBYwBncfMuLDlAWjHbUXvGIw" alt="Express" width="64" style="display: inline">
 <img src="https://cdn.worldvectorlogo.com/logos/sequelize.svg" alt="Mongoose" width="64" style="display: inline">
+<img src="https://joi.dev/img/joiLogo.jpg" alt="JOI" width="50" height="64" style="display: inline">
 </p><div style="clear:both;"></div>
 
 ### Frontend
 
+<p style="float: left">
 <img src="https://cdn.iconscout.com/icon/free/png-256/react-4-1175110.png" alt="React.js" width="64" style="display: inline">
 <img src="https://react.semantic-ui.com/logo.png" alt="Semantic UI" width="64" style="display: inline">
+</p><div style="clear:both;"></div>
 
 ### Database
 
@@ -25,14 +28,16 @@
 
 ### Development
 
+<p style="float: left">
 <img src="https://cdn.iconscout.com/icon/free/png-256/docker-226091.png" alt="MongoDB" width="64" style="display: inline">
 <img src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/02/Compose.png?resize=200%2C219&ssl=1" alt="Docker Compose" width="64" style="display: inline">
+</p><div style="clear:both;"></div>
 
 ### Tests
 
 <img src="https://cdn.freebiesupply.com/logos/large/2x/jest-logo-svg-vector.svg" alt="Jest" width="64" style="display: inline">
 
-#### + supertest library
+#### + _supertest_ & _cross_env_ libraries
 
 ---
 
