@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 const { handleError, logError } = require('./utils/error.utils');
 
 app.use(express.json());
+app.use(cors());
 
 const db = require('./models');
 db.sequelize.sync();

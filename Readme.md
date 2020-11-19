@@ -12,8 +12,10 @@
 <img src="https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png" alt="Node.js" width="64" style="display: inline">
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS88qsrd0PXJzWBK2MYRgBWchcs-LMBYwBncfMuLDlAWjHbUXvGIw" alt="Express" width="64" style="display: inline">
 <img src="https://cdn.worldvectorlogo.com/logos/sequelize.svg" alt="Mongoose" width="64" style="display: inline">
-<img src="https://joi.dev/img/joiLogo.jpg" alt="JOI" width="50" height="64" style="display: inline">
+<img src="https://cdn.freebiesupply.com/logos/large/2x/jest-logo-svg-vector.svg" alt="Jest" width="64" style="display: inline">
 </p><div style="clear:both;"></div>
+
+\+ _**supertest**_, _**cross_env**_ & _**Joi**_ libraries
 
 ### Frontend
 
@@ -31,13 +33,9 @@
 <p style="float: left">
 <img src="https://cdn.iconscout.com/icon/free/png-256/docker-226091.png" alt="MongoDB" width="64" style="display: inline">
 <img src="https://i1.wp.com/www.docker.com/blog/wp-content/uploads/2020/02/Compose.png?resize=200%2C219&ssl=1" alt="Docker Compose" width="64" style="display: inline">
+<img src="https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/358/full/eslintlogo.png" alt="ES Lint" width="64" style="display: inline">
+<img src="https://cdn.iconscout.com/icon/free/png-512/nodemon-226039.png" alt="Nodemon" width="64" style="display: inline">
 </p><div style="clear:both;"></div>
-
-### Tests
-
-<img src="https://cdn.freebiesupply.com/logos/large/2x/jest-logo-svg-vector.svg" alt="Jest" width="64" style="display: inline">
-
-#### + _supertest_ & _cross_env_ libraries
 
 ---
 
