@@ -14,7 +14,9 @@ const IssueCard = ({ issue }) => {
   };
 
   return (
-    <Card style={{ margin: '1rem 0', cursor: 'pointer' }} onClick={handleClick}>
+    <Card
+      style={{ margin: '1rem 0', cursor: 'pointer', width: '95%' }}
+      onClick={handleClick}>
       <Card.Content>
         <Card.Header>{title}</Card.Header>
         <Card.Meta>{moment(createdAt).fromNow(true)}</Card.Meta>

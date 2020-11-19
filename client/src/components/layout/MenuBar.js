@@ -15,7 +15,7 @@ const MenuBar = () => {
       <Menu secondary pointing>
         <Menu.Item
           name='logo'
-          as='h1'
+          as='h3'
           style={{ padding: '2rem 1rem 0.5rem 0.5rem' }}>
           Issue Tracker 2.0
         </Menu.Item>

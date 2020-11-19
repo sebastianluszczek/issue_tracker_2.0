@@ -151,6 +151,7 @@ const IssueModal = () => {
                 color='red'
                 onClick={handleRemoveClick}>
                 <Icon name='remove' />
+                {' Remove'}
               </Button>
             )}
             <Button
@@ -160,6 +161,7 @@ const IssueModal = () => {
               color='green'
               style={{ marginBottom: '1rem' }}>
               <Icon name='save' />
+              {' Save'}
             </Button>
           </Modal.Actions>
         </Form>

@@ -13,8 +13,8 @@ const IssuesGrid = () => {
 
   return (
     <div>
-      <Grid columns={3}>
-        <Grid.Column>
+      <Grid>
+        <Grid.Column mobile={16} tablet={5} computer={5}>
           <h4>Open</h4>
           {issues &&
             issues.map(issue => {
@@ -23,7 +23,7 @@ const IssuesGrid = () => {
               ) : null;
             })}
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column mobile={16} tablet={5} computer={5}>
           <h4>Pending</h4>
           {issues &&
             issues.map(issue => {
@@ -32,7 +32,7 @@ const IssuesGrid = () => {
               ) : null;
             })}
         </Grid.Column>
-        <Grid.Column>
+        <Grid.Column mobile={16} tablet={5} computer={5}>
           <h4>Closed</h4>
           {issues &&
             issues.map(issue => {
