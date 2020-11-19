@@ -12,10 +12,12 @@ const IssuesGrid = () => {
     pending: 0,
     closed: 0,
   });
-
   useEffect(() => {
     getIssues();
+    // eslint-disable-next-line
+  }, []);
 
+  useEffect(() => {
     setCounts({
       open: issues ? issues.filter(issue => issue.state === 'open').length : 0,
       pending: issues
