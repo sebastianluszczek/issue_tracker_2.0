@@ -64,13 +64,14 @@ const IssueModal = () => {
     });
   };
 
-  const onSubmit = async () => {
+  const handleAddClick = async () => {
     let response;
     if (currentIssue) {
       response = await editIssue(values, currentIssue.id);
     } else {
       response = await addIssue(values);
     }
+
     if (response && response.status === 'error') {
       setErrors([...response.errors]);
     } else {
@@ -87,6 +88,8 @@ const IssueModal = () => {
 
   const handleRemoveClick = () => {
     removeIssue(currentIssue);
+    setModal(false);
+    removeCurrent();
   };
 
   return (
@@ -94,6 +97,7 @@ const IssueModal = () => {
       onClose={() => setModal(false)}
       onOpen={() => setModal(true)}
       open={modal}
+      dimmer={'inverted'}
       trigger={
         <Button color='green' floated='right'>
           Add Issue
@@ -101,7 +105,7 @@ const IssueModal = () => {
       }>
       <Modal.Header>{currentIssue ? 'Issue info' : 'Add Issue'}</Modal.Header>
       <Container>
-        <Form onSubmit={onSubmit}>
+        <Form>
           {errors && errors.length > 0 && (
             <Message negative style={{ marginTop: '1rem' }}>
               <ul>
@@ -143,28 +147,23 @@ const IssueModal = () => {
               onChange={onChange}
             />
           </Modal.Content>
-          <Modal.Actions>
-            {currentIssue && (
-              <Button
-                icon
-                floated='right'
-                color='red'
-                onClick={handleRemoveClick}>
-                <Icon name='remove' />
-                {' Remove'}
-              </Button>
-            )}
-            <Button
-              icon
-              type='submit'
-              floated='right'
-              color='green'
-              style={{ marginBottom: '1rem' }}>
-              <Icon name='save' />
-              {' Save'}
-            </Button>
-          </Modal.Actions>
         </Form>
+        {currentIssue && (
+          <Button icon floated='right' color='red' onClick={handleRemoveClick}>
+            <Icon name='remove' />
+            {' Remove'}
+          </Button>
+        )}
+        <Button
+          icon
+          type='submit'
+          floated='right'
+          color='green'
+          onClick={handleAddClick}
+          style={{ marginBottom: '1rem' }}>
+          <Icon name='save' />
+          {' Save'}
+        </Button>
       </Container>
     </Modal>
   );
