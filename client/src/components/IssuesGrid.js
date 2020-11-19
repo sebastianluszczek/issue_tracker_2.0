@@ -32,7 +32,7 @@ const IssuesGrid = () => {
   return (
     <div>
       <Grid>
-        <Grid.Column mobile={16} tablet={5} computer={5}>
+        <Grid.Column mobile={16} tablet={8} computer={5}>
           <h3>
             Open{' '}
             <span
@@ -54,7 +54,7 @@ const IssuesGrid = () => {
             })}
           {counts.open === 0 ? <p>No 'open' issues...</p> : null}
         </Grid.Column>
-        <Grid.Column mobile={16} tablet={5} computer={5}>
+        <Grid.Column mobile={16} tablet={8} computer={5}>
           <h3>
             Pending
             <span
@@ -76,7 +76,7 @@ const IssuesGrid = () => {
             })}
           {counts.pending === 0 ? <p>No 'pending' issues...</p> : null}
         </Grid.Column>
-        <Grid.Column mobile={16} tablet={5} computer={5}>
+        <Grid.Column mobile={16} tablet={8} computer={5}>
           <h3>
             Closed
             <span
